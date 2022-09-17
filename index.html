@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="assets/library/notyf.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="book-wrapper flex">
+      <aside class="book-submit flex flex-col">
+        <div class="book-submit-header">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMWVtIiBoZWlnaHQ9IjFlbSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iLW1zLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIxMjEyMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xMiA2LjI1M3YxM20wLTEzQzEwLjgzMiA1LjQ3NyA5LjI0NiA1IDcuNSA1UzQuMTY4IDUuNDc3IDMgNi4yNTN2MTNDNC4xNjggMTguNDc3IDUuNzU0IDE4IDcuNSAxOHMzLjMzMi40NzcgNC41IDEuMjUzbTAtMTNDMTMuMTY4IDUuNDc3IDE0Ljc1NCA1IDE2LjUgNWMxLjc0NyAwIDMuMzMyLjQ3NyA0LjUgMS4yNTN2MTNDMTkuODMyIDE4LjQ3NyAxOC4yNDcgMTggMTYuNSAxOGMtMS43NDYgMC0zLjMzMi40NzctNC41IDEuMjUzIi8+PC9zdmc+"
+          />
+          <h1>Bookshelf Apps</h1>
+        </div>
+
+        <form class="book-submit-content flex flex-col">
+          <div class="book-submit-content-header">
+            <h2 class="book-submit-content-title">Masukkan Buku Baru</h2>
+
+            <input class="book-submit-reset" type="reset" value="Reset">
+          </div>
+
+          <div class="form-input">
+            <label for="book-title">Judul</label>
+            <input id="book-title" type="text" required />
+          </div>
+          <div class="form-input">
+            <label for="book-author">Penulis</label>
+            <input id="book-author" type="text" required />
+          </div>
+          <div class="form-input">
+            <label for="book-year">Tahun</label>
+            <input
+              id="book-year"
+              type="number"
+              placeholder="ex. 2022"
+              required
+            />
+          </div>
+          <div class="form-input form-input--inline">
+            <input id="book-is-completed" type="checkbox" />
+            <label for="book-is-completed">Selesai dibaca</label>
+          </div>
+
+          <button id="book-submit-button" type="submit">Masukkan Buku</button>
+          <button id="book-edit-button" class="hidden" type="button">
+            Simpan Perubahan Buku
+          </button>
+        </form>
+
+        <div class="book-submit-footer flex">
+          <div class="author">
+            Copyright &copy; 2022 - <a href="https://github.com/nyancodeid" target="_blank">Ryan Aunur Rassyid</a>
+          </div>
+        </div>
+
+        <img class="foreground-image" src="assets/reading.png" alt="">
+      </aside>
+
+      <section class="book-list flex flex-col card">
+        <section class="book-search">
+          <input class="book-search-input" type="text" placeholder="Pencarian buku atau pengarang" />
+        </section>
+
+        <div class="book-list-wrapper">
+          <section class="book-list-container card">
+            <div class="book-list-header">
+              <h3>Belum selesai dibaca</h3>
+
+              <span class="uncompleted-book-count">1 item</span>
+            </div>
+
+            <div id="uncompleted-book-list" class="book-list-content"></div>
+          </section>
+          <section class="book-list-container card">
+            <div class="book-list-header">
+              <h3>Selesai dibaca</h3>
+
+              <span class="completed-book-count">1 item</span>
+            </div>
+
+            <div id="completed-book-list" class="book-list-content"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/library/notyf.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
