@@ -4,7 +4,9 @@
   "description": "Sebuah Website yang dibangun untuk memenuhi Submission kelas Belajar Dasar Pemrograman Web di Dicoding.",
   "main": "script.js",
   "scripts": {
-    "watch": "sass source/style.scss style.css --watch --no-source-map"
+    "dev": "sass source/style.scss style.css",
+    "watch": "sass source/style.scss style.css --watch",
+    "build": "sass source/style.scss style.css --style compressed --no-source-map"
   },
   "keywords": [],
   "author": "",
